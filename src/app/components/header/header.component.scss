@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+header {
+    padding: 20px;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    color: #5b4c5f;
+    font-size: 40px;
+}
+.bi-book-half{
+    margin-right: 5px;
+    color: #201321;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+    position: relative;
+    &:before{
+        content:'';
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: #5b4c5f;
+        top: 1px;
+        animation-name: show;
+        animation-duration: 1s;
+    }
+    &:after{
+        content:'';
+        width: 100%;
+        position: absolute;
+        height: 1px;
+        background-color: #5b4c5f;
+        bottom: 2px;
+        animation-name: show;
+        animation-duration: 1s;
+        right: 0;
+    }
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    font-size: 16px;
+    margin: 0 auto;
+    height: 70px;
+    width: 80%;
+    margin-top: 35px;
+    font-family: 'Comfortaa', cursive;
+    line-height: 70px;
+    &__item{
+        &__link{
+            text-decoration: none;
+            &:link{
+              color: #201321;  
+            }
+            
+            &:visited{
+                color: #5b4c5f;
+            }
+            &:hover{
+                color: rgb(118, 178, 187);
+            }
+            &:active{
+                color: rgb(118, 178, 187);
+            }
+        }
+    }
+}
+.bi-cart4, .bi-person-circle{
+    font-size: 25px;
+}
+.homeLink{
+    text-decoration: none;
+    color: #5b4c5f;
+}
+@keyframes show {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}

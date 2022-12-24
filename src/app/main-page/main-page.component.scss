@@ -1,0 +1,205 @@
+.sale {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  position: relative;
+  &:before {
+    content: "";
+    width: 1100px;
+    height: 300px;
+    background-color: #61b0b7;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    z-index: -1;
+    animation-name: slideRight;
+    animation-duration: 1s;
+  }
+  &__offer {
+    width: 500px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    animation-name: slide;
+    animation-duration: 1s;
+    &__paragraph {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      height: 100px;
+    }
+    &__button {
+      width: 200px;
+      height: 70px;
+      background-color: #24292f;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      line-height: 70px;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #fff;
+      
+    }
+    &__header {
+      font-family: "Old Standard TT", serif;
+      font-size: 80px;
+      color: rgb(8, 1, 41);
+    }
+  }
+  &__bookspic {
+    height: 480px;
+    animation-name: slide;
+    animation-duration: 1s;
+  }
+}
+.novelty {
+  height: 620px;
+  &__heading {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    padding: 18px;
+    &__header {
+      font-family: "Comfortaa";
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 254%;
+    transform: translateX(0);
+    transition: all .5s;
+    &__bookbox {
+      min-height: 450px;
+      width: 330px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      font-family: "Roboto", sans-serif;
+      transition: all .2s ease-in;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        box-shadow: 0px 0px 10px 10px rgba(198, 198, 198, 0.442);
+      }
+      &__pic {
+        height: 300px;
+      }
+      &__title {
+        font-size: 21px;
+        text-align: center;
+      }
+      &__author {
+        font-size: 19px;
+        color: #585858;
+      }
+      &__price-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+        &__buy-btn {
+          width: 145px;
+          height: 40px;
+          border: 1px solid rgb(117, 13, 13);
+          display: flex;
+          &__link {
+            margin: 0 auto;
+            line-height: 40px;
+            color: rgb(117, 13, 13);
+            text-decoration: none;
+          }
+        }
+        &__price-tag {
+          color: rgb(117, 13, 13);
+        }
+      }
+    }
+  }
+}
+.bi-arrow-left-circle, .bi-arrow-right-circle{
+  font-size: 40px;
+  &:hover{
+    cursor: pointer;
+    color: rgb(117, 13, 13);
+  }
+}
+.bi-arrow-left-circle{
+  margin-right: 20px;
+  
+}
+.benefits{
+  width: 100%;
+  height: 300px;
+  background-color: #7daeb3ba;
+  &__container{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &__box{
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      align-items: center;
+      justify-content: space-around;
+      height: 200px;
+      background-color: #7daeb332;
+
+      &__text{
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+    &__box>i{
+      font-size: 50px;
+      color: rgb(8, 1, 41);
+    }
+  }
+  &__header{
+      text-align: center;
+      font-family: "Old Standard TT", serif;
+      color: rgb(8, 1, 41);
+      font-size: 40px;
+      // width: 300px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+  }
+}
+section:not(.benefits) {
+  padding: 0 18px;
+}
+@keyframes slide {
+  0%{
+    opacity: 0;
+    transform: translateY(-178px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slideRight {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 1100px;
+  }
+}
